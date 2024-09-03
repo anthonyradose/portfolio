@@ -1,0 +1,98 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  height: 10vh;
+  position: fixed;
+}
+.navbar-collapse {
+  top: 10vh;
+}
+main {
+  position: relative;
+  margin-top: 10vh;
+}
+footer {
+  background-color: red;
+  position: relative;
+}
+h1,
+h2,
+h5 {
+  font-family: "Gugi", sans-serif;
+}
+#homeIconLink {
+  width: 3rem;
+}
+#homeIconImage {
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px lightgrey;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 10vh;
+}
+/* Sections: */
+#intro {
+  height: 90vh;
+}
+#intro::after {
+  position: fixed;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 100%,
+    left top,
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0))
+  );
+  transform: perspective(200px) rotateX(50deg) scale(2, 1) translateZ(0);
+  content: "";
+  display: block;
+  bottom: -33px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, #5f9ea0 3px, transparent 3px),
+    linear-gradient(to bottom, purple 1px, transparent 3px);
+  background-position: center;
+}
+#projects {
+  background-color: yellow;
+  position: relative;
+}
+#aboutMe {
+  height: 90vh;
+  background-color: blue;
+  position: relative;
+  color: white;
+}
+[class^="devicon-"] {
+  font-size: 2rem;
+}
+#contact {
+  background-color: green;
+  color: white;
+}
+
+/* Media Queries: */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    height: 10vh;
+    top: 0;
+    background-color: red;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-collapse {
+    height: 45vh;
+  }
+}
+@media (min-width: 1200px) {
+  #projects {
+    height: 90vh;
+  }
+}
