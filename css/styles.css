@@ -1,13 +1,8 @@
+/* ================= GENERAL STYLING ================= */
 body {
   font-family: "Roboto", sans-serif;
 }
-nav {
-  height: 10vh;
-  position: fixed;
-}
-.navbar-collapse {
-  top: 10vh;
-}
+
 main {
   position: relative;
   margin-top: 10vh;
@@ -21,21 +16,14 @@ h2,
 h5 {
   font-family: "Gugi", sans-serif;
 }
-#homeIconLink {
-  width: 3rem;
-}
-#homeIconImage {
-  height: 3rem;
-  border-radius: 50%;
-  box-shadow: 1px 1px 1px lightgrey;
-}
+
+/* ================= SECTIONS ================= */
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 10vh;
 }
-/* Sections: */
 #intro {
   height: 90vh;
 }
@@ -69,9 +57,6 @@ section {
   background-color: blue;
   position: relative;
   color: white;
-}
-[class^="devicon-"] {
-  font-size: 2rem;
 }
 #contact {
   background-color: green;
@@ -110,6 +95,43 @@ nav::after {
   height: 3rem;
   border-radius: 50%;
   box-shadow: 1px 1px 1px #53565a;
+}
+
+/* ================= ICONS ================= */
+[class^="devicon-"] {
+  font-size: 2rem;
+}
+
+#scrollLink {
+  position: absolute;
+  top: 70vh;
+}
+#scrollArrow {
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #393d47;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  transform: rotate(45deg);
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ================= SPECIFIC STYLING ================= */
+#intro * {
+  z-index: 3;
 }
 
 /* ================= MEDIA QUERIES ================= */
