@@ -2,7 +2,6 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-
 main {
   position: relative;
   margin-top: 10vh;
@@ -26,6 +25,7 @@ section {
 }
 #intro {
   height: 90vh;
+
 }
 #intro::after {
   position: fixed;
@@ -49,7 +49,6 @@ section {
   background-position: center;
 }
 #projects {
-  background-color: yellow;
   position: relative;
 }
 #aboutMe {
@@ -97,11 +96,15 @@ nav::after {
   box-shadow: 1px 1px 1px #53565a;
 }
 
-/* ================= ICONS ================= */
-[class^="devicon-"] {
-  font-size: 2rem;
+/* ================= BUTTON STYLING ================= */
+.btn {
+  border: none;
 }
-
+.btn-primary {
+  background-color: #6dc2bb;
+  --bs-btn-hover-bg: #5ab5a7;
+  --bs-btn-active-bg: #4a9a91;
+}
 #scrollLink {
   position: absolute;
   top: 70vh;
@@ -114,6 +117,14 @@ nav::after {
   border-top: 5px solid transparent;
   transform: rotate(45deg);
   animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* ================= ICONS ================= */
+[class^="devicon-"] {
+  font-size: 2rem;
+}
+.card .bi-github {
+  font-size: 1.5rem;
 }
 
 /* ================= ANIMATIONS ================= */
@@ -130,15 +141,57 @@ nav::after {
 }
 
 /* ================= SPECIFIC STYLING ================= */
-#intro * {
+ #intro * {
   z-index: 3;
+} 
+.card{
+  width: 90%;
 }
+.card-text{
+  background-color: green;
+  background-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  width: 85%;
+  height: 2.5rem;
+}
+.card-text:hover{
+  white-space: normal;
+  text-overflow: unset;
+  overflow: auto;
+  height: 5rem;
+  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.2);
+} 
 
 /* ================= MEDIA QUERIES ================= */
+/* xs */
+@media (min-width: 320px){
+}
+/* s */
 @media (min-width: 576px) {
+  .card{
+  }
+  #project3 .my-3, #project4 .my-3{ 
+    margin-bottom: 1rem !important;
+  }
 }
+/* m */
 @media (min-width: 768px) {
+  .card{
+    width: 45%;
+  }
+  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
+    font-size: 1.6rem;
+  }
+  #project3 .my-3, #project4 .my-3{ 
+    margin-bottom: 1.4rem !important;
+  }
 }
+/* l */
 @media (min-width: 992px) {
   nav {
     border-bottom: none;
@@ -164,10 +217,42 @@ nav::after {
       cyan calc(100% - 4px)
     );
   }
+  .card{
+    width: 30%;
+  }
+  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
+    font-size: 1.3rem;
+  }
+  #project3 .my-3, #project4 .my-3{ 
+    margin-bottom: 1.7rem !important;
+  }
 }
+/* xl */
 @media (min-width: 1200px) {
+  .card{
+    width: 22.5%;
+  }
+  #project2 [class^="devicon-"]{
+    font-size: 1.9rem;
+  }
+  #project2 .my-3{ 
+    margin-bottom: 1.1rem !important;
+  }
+  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
+    font-size: 1.2rem;
+  }
+  #project3 .my-3, #project4 .my-3{ 
+    margin-bottom: 1.8rem !important;
+  }
 }
+/* xxl */
 @media (min-width: 1400px) {
+  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
+    font-size: 1.6rem;
+  }
+  #project3 .my-3, #project4 .my-3{ 
+    margin-bottom: 1.4rem !important;
+  }
 }
 /* Media Queries for Max-Width: */
 @media (max-width: 992px) {
