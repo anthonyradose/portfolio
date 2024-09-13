@@ -10,7 +10,6 @@ main {
   margin-top: 10vh;
 }
 footer {
-  background-color: red;
   position: relative;
 }
 h1,
@@ -58,7 +57,7 @@ section {
   position: relative;
 }
 #contact {
-  background-color: green;
+  background-color: #393D47;
   color: white;
 }
 
@@ -117,6 +116,9 @@ nav::after {
   border-top: 5px solid transparent;
   transform: rotate(45deg);
   animation: fadeInOut 2s ease-in-out infinite;
+}
+#backtoTop{
+  color: white;
 }
 
 /* ================= ICONS ================= */
