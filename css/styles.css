@@ -48,6 +48,8 @@ section {
   background-size: 50px 50px;
   background-image: linear-gradient(to right, #5f9ea0 3px, transparent 3px),
     linear-gradient(to bottom, purple 1px, transparent 3px);
+    /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
+    linear-gradient(to bottom, #AD1F9A 1px, transparent 3px); */
   background-position: center;
 }
 #projects {
@@ -59,6 +61,7 @@ section {
 #contact {
   background-color: #393D47;
   color: white;
+  border-top: 3px solid #FFAD00;
 }
 
 /* ================= NAVIGATION STYLING ================= */
