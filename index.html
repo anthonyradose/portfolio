@@ -60,6 +60,7 @@
               aria-current="page"
               href="#"
               ><img
+                class="img-fluid"
                 src="./css/images/eye.jpg"
                 alt="Eye Icon"
                 id="homeIconImage"
@@ -76,12 +77,15 @@
                 aria-current="page"
                 href="#"
                 ><img
+                  class="img-fluid"
                   src="./css/images/eye.jpg"
                   alt="Eye Icon"
                   id="homeIconImage"
               /></a>
             </div>
-            <ul class="navbar-nav mx-auto mt-5 mb-3 my-lg-0 w-50 justify-content-around">
+            <ul
+              class="navbar-nav mx-auto mt-5 mb-3 my-lg-0 w-50 justify-content-around"
+            >
               <li class="nav-item align-self-center">
                 <a class="nav-link p-0 my-3" href="#projects">PROJECTS</a>
               </li>
@@ -92,7 +96,9 @@
                 <a class="nav-link p-0 my-3" href="#contact">CONTACT</a>
               </li>
             </ul>
-            <ul class="navbar-nav mx-auto mt-3 mb-5 my-lg-0 w-25 justify-content-end text-center">
+            <ul
+              class="navbar-nav mx-auto mt-3 mb-5 my-lg-0 w-25 justify-content-end text-center"
+            >
               <li class="nav-item align-self-center">
                 <a
                   class="nav-link p-0 m-lg-2 my-3"
@@ -110,7 +116,10 @@
                 ></a>
               </li>
               <li class="nav-item align-self-center">
-                <a class="nav-link p-0 m-lg-2 my-3" href="./css/CV-2024.pdf" target="_blank"
+                <a
+                  class="nav-link p-0 m-lg-2 my-3"
+                  href="./css/CV-2024.pdf"
+                  target="_blank"
                   ><i class="bi bi-file-earmark-person"></i
                 ></a>
               </li>
@@ -138,13 +147,21 @@
       </section>
       <section id="projects" class="d-flex align-items-center px-5">
         <h2 class="display-2 my-5">PROJECTS</h2>
-        <div class="container row justify-content-center my-5">
+        <div class="container row justify-content-center m-5">
           <div class="card m-2 rounded-0" id="project1">
             <img
-              src="./css/images/project-1.jpg"
+              src="./css/images/project1.jpg"
+              srcset="
+                ./css/images/project1-sm.jpg  640w,
+                ./css/images/project1-lg.jpg 1024w
+              "
+              sizes="(max-width: 768px) 574px, 
+                   (min-width: 769px) 880px"
               class="card-img-top rounded-0"
               alt="..."
+              loading="lazy"
             />
+
             <div class="card-body">
               <h5 class="card-title">Van Halen '83</h5>
               <p class="card-text me-2 pb-2">
@@ -179,9 +196,16 @@
           </div>
           <div class="card m-2 rounded-0" id="project2">
             <img
-              src="./css/images/project-2.jpg"
+              src="./css/images/project2.jpg"
+              srcset="
+                ./css/images/project2-sm.jpg  640w,
+                ./css/images/project2-lg.jpg 1024w
+              "
+              sizes="(max-width: 768px) 574px, 
+                   (min-width: 769px) 880px"
               class="card-img-top rounded-0"
               alt="..."
+              loading="lazy"
             />
             <div class="card-body">
               <h5 class="card-title">QuizWorld</h5>
@@ -217,9 +241,16 @@
           </div>
           <div class="card m-2 rounded-0" id="project3">
             <img
-              src="./css/images/project-3.jpg"
+              src="./css/images/project3.jpg"
+              srcset="
+                ./css/images/project3-sm.jpg  640w,
+                ./css/images/project3-lg.jpg 1024w
+              "
+              sizes="(max-width: 768px) 574px, 
+                   (min-width: 769px) 880px"
               class="card-img-top rounded-0"
               alt="..."
+              loading="lazy"
             />
             <div class="card-body">
               <h5 class="card-title">Gamesay</h5>
@@ -259,9 +290,16 @@
           </div>
           <div class="card m-2 rounded-0" id="project4">
             <img
-              src="./css/images/project-4.jpg"
+              src="./css/images/project4.jpg"
+              srcset="
+                ./css/images/project4-sm.jpg  640w,
+                ./css/images/project4-lg.jpg 1024w
+              "
+              sizes="(max-width: 768px) 574px, 
+                   (min-width: 769px) 880px"
               class="card-img-top rounded-0"
               alt="..."
+              loading="lazy"
             />
             <div class="card-body">
               <h5 class="card-title">Obscura View</h5>
@@ -301,6 +339,7 @@
           </div>
         </div>
       </section>
+
       <section id="aboutMe" class="d-flex flex-column align-items-center px-5">
         <h2 class="display-2 my-5">ABOUT ME</h2>
         <p class="mb-xl-5 mx-5 px-5 text-center">
@@ -308,10 +347,14 @@
           time, and video games rule!
         </p>
         <p class="mb-xl-5 mx-5 px-5 text-center">
-          Hi, I'm a junior fullstack developer looking to commence my journey in the tech industry!
+          Hi, I'm a junior fullstack developer looking to commence my journey in
+          the tech industry!
         </p>
         <p class="mb-0 mx-5 px-5 text-center">
-          I’m constantly eager to expand my knowledge and learn something new! Outside of coding, I enjoy playing guitar, gaming, posting rad photos on Instagram, learning French, reading, and savoring a good coffee or beer!
+          I’m constantly eager to expand my knowledge and learn something new!
+          Outside of coding, I enjoy playing guitar, gaming, posting rad photos
+          on Instagram, learning French, reading, and savoring a good coffee or
+          beer!
         </p>
         <h3 class="m-5">SKILLSET:</h3>
         <div class="container d-flex justify-content-center mb-5">
@@ -365,9 +408,7 @@
             ></a>
           </li>
         </ul>
-        <a href="#intro" id="backtoTop"
-          ><i class="bi bi-caret-up"></i
-        ></a>
+        <a href="#intro" id="backtoTop"><i class="bi bi-caret-up"></i></a>
       </div>
     </footer>
     <!-- Bootstrap JS -->
