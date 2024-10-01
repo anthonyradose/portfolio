@@ -2,7 +2,7 @@
 
 [Portfolio](https://anthonyradose.github.io/portfolio)
 
-My portfolio that contains all my contact info, an about-me, and links to my projects. It was made using HTML, CSS, and Bootstrap.
+My portfolio that contains all my contact info, an about-me, and links to my projects. It was made using HTML, CSS, Bootstrap and JS.
 
 <hr>
 
