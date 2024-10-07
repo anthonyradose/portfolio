@@ -1,8 +1,8 @@
 /* ================= GENERAL STYLING ================= */
-/* *{
+/* * {
   outline: 1px solid red;
 } */
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -30,7 +30,6 @@ section {
 }
 #intro {
   height: 90vh;
-
 }
 #intro::after {
   position: fixed;
@@ -51,7 +50,7 @@ section {
   background-size: 50px 50px;
   background-image: linear-gradient(to right, #5f9ea0 3px, transparent 3px),
     linear-gradient(to bottom, purple 1px, transparent 3px);
-    /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
+  /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
     linear-gradient(to bottom, #AD1F9A 1px, transparent 3px); */
   background-position: center;
 }
@@ -62,9 +61,9 @@ section {
   position: relative;
 }
 #contact {
-  background-color: #393D47;
+  background-color: #393d47;
   color: white;
-  border-top: 3px solid #FFAD00;
+  border-top: 3px solid #ffad00;
 }
 
 /* ================= NAVIGATION STYLING ================= */
@@ -123,13 +122,13 @@ nav::after {
   transform: rotate(45deg);
   animation: fadeInOut 2s ease-in-out infinite;
 }
-#backtoTop{
+#backtoTop {
   color: white;
 }
 
 /* ================= ICONS ================= */
 [class^="devicon-"] {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .card .bi-github {
   font-size: 1.5rem;
@@ -149,13 +148,13 @@ nav::after {
 }
 
 /* ================= SPECIFIC STYLING ================= */
- #intro * {
+#intro * {
   z-index: 3;
-} 
-.card{
+}
+.card {
   width: 90%;
 }
-.card-text{
+.card-text {
   background-color: green;
   background-color: white;
   white-space: nowrap;
@@ -164,42 +163,79 @@ nav::after {
   transition: height 0.3s ease-in-out;
   cursor: pointer;
   position: absolute;
-  width: 85%;
+  width: calc(100% - 24px);
   height: 2.5rem;
 }
-.card-text:hover{
+.card-text:hover {
   white-space: normal;
   text-overflow: unset;
   overflow: auto;
   height: 5rem;
   box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.2);
-} 
+}
+#project3 [class^="devicon-"],
+#project4 [class^="devicon-"] {
+  margin-right: 0rem;
+}
+.card  a.btn.btn-primary.rounded-0 {
+  margin-right: 1rem;
+  padding: 0;
+}
 
 /* ================= MEDIA QUERIES ================= */
-/* xs */
-@media (min-width: 320px){
+/* Mobile S: */
+@media (min-width: 320px) {
 }
-/* s */
-@media (min-width: 576px) {
-  .card{
+/* Mobile M: */
+@media (min-width: 375px) {
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    margin-right: 0.5rem;
   }
-  #project3 .my-3, #project4 .my-3{ 
+  .card  a.btn.btn-primary.rounded-0 {
+    margin-right: 0;
+    padding: 0.75rem 0.375rem;
+  }
+}
+/* Mobile L: */
+@media (min-width: 425px) {
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    margin-right: 1rem;
+  }
+}
+/* Bootstrap sm: */
+@media (min-width: 576px) {
+  #project3 .my-3,
+  #project4 .my-3 {
     margin-bottom: 1rem !important;
   }
+  [class^="devicon-"] {
+    font-size: 2rem;
+  }
+  .card-text {
+    width: calc(100% - 56px);
+  }
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    margin-right: 0.5rem;
+  }
 }
-/* m */
+/* Bootstrap md: */
 @media (min-width: 768px) {
-  .card{
+  .card {
     width: 45%;
   }
-  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
-    font-size: 1.6rem;
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    font-size: 1.3rem;
   }
-  #project3 .my-3, #project4 .my-3{ 
+  #project3 .my-3,
+  #project4 .my-3 {
     margin-bottom: 1.4rem !important;
   }
 }
-/* l */
+/* Bootstrap lg: */
 @media (min-width: 992px) {
   nav {
     border-bottom: none;
@@ -225,46 +261,58 @@ nav::after {
       cyan calc(100% - 4px)
     );
   }
-  .card{
+  .card {
     width: 30%;
   }
-  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
-    font-size: 1.3rem;
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    font-size: 1.1rem;
   }
-  #project3 .my-3, #project4 .my-3{ 
+  #project3 .my-3,
+  #project4 .my-3 {
     margin-bottom: 1.7rem !important;
   }
-  #aboutMe p{
+  #aboutMe p {
     font-size: 1.3rem;
   }
 }
-/* xl */
+/* Bootstrap xl: */
 @media (min-width: 1200px) {
-  .card{
+  .card {
     width: 22.5%;
   }
-  #project2 [class^="devicon-"]{
+  #project2 [class^="devicon-"] {
     font-size: 1.9rem;
   }
-  #project2 .my-3{ 
+  #project2 .my-3 {
     margin-bottom: 1.1rem !important;
   }
-  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
-    font-size: 1.2rem;
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
   }
-  #project3 .my-3, #project4 .my-3{ 
+  #project3 .my-3,
+  #project4 .my-3 {
     margin-bottom: 1.8rem !important;
   }
-  #aboutMe p{
+  #aboutMe p {
     max-width: 70%;
   }
 }
-/* xxl */
+/* Bootstrap xxl: */
 @media (min-width: 1400px) {
-  #project3 [class^="devicon-"], #project4 [class^="devicon-"]{
-    font-size: 1.6rem;
+  #project3 [class^="devicon-"],
+  #project4 [class^="devicon-"] {
+    font-size: 1.5rem;
   }
-  #project3 .my-3, #project4 .my-3{ 
+  #project3 .my-3,
+  #project4 .my-3 {
     margin-bottom: 1.4rem !important;
   }
 }
+
+/* Tablet: */
+/* Laptop: */
+/* Laptop L:  */
+/* 4K:  */
