@@ -44,7 +44,7 @@ section {
   content: "";
   display: block;
   bottom: -33px;
-  left: 0;
+  left: -11px;
   right: 0;
   height: 100%;
   background-size: 50px 50px;
@@ -53,6 +53,7 @@ section {
   /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
     linear-gradient(to bottom, #AD1F9A 1px, transparent 3px); */
   background-position: center;
+  /* animation: moveGrid 3s linear forwards; */
 }
 #projects {
   position: relative;
@@ -120,7 +121,10 @@ nav::after {
   border-left: 5px solid transparent;
   border-top: 5px solid transparent;
   transform: rotate(45deg);
+  /* opacity: 0; */
   animation: fadeInOut 2s ease-in-out infinite;
+  animation: fadeInOut 2s 3s ease-in-out infinite;
+  
 }
 #backtoTop {
   color: white;
@@ -146,6 +150,14 @@ nav::after {
     opacity: 1;
   }
 }
+/* @keyframes moveGrid {
+  from {
+    transform: translateY(0%) 
+  }
+  to {
+    transform: translateY(-50%)
+  }
+} */
 
 /* ================= SPECIFIC STYLING ================= */
 #intro * {
