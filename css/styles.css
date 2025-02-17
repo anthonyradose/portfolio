@@ -40,7 +40,6 @@ section {
     from(rgba(0, 0, 0, 0.7)),
     to(rgba(0, 0, 0, 0))
   );
-  transform: perspective(200px) rotateX(50deg) scale(2, 1) translateZ(0);
   content: "";
   display: block;
   bottom: -33px;
@@ -53,7 +52,7 @@ section {
   /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
     linear-gradient(to bottom, #AD1F9A 1px, transparent 3px); */
   background-position: center;
-  /* animation: moveGrid 3s linear forwards; */
+  animation: moveGrid 3s linear forwards;
 }
 #projects {
   position: relative;
@@ -121,10 +120,8 @@ nav::after {
   border-left: 5px solid transparent;
   border-top: 5px solid transparent;
   transform: rotate(45deg);
-  /* opacity: 0; */
-  animation: fadeInOut 2s ease-in-out infinite;
+  opacity: 0;
   animation: fadeInOut 2s 3s ease-in-out infinite;
-  
 }
 #backtoTop {
   color: white;
@@ -150,14 +147,16 @@ nav::after {
     opacity: 1;
   }
 }
-/* @keyframes moveGrid {
+@keyframes moveGrid {
   from {
-    transform: translateY(0%) 
+    transform: none;
   }
   to {
-    transform: translateY(-50%)
+    transform: perspective(200px) rotateX(50deg) scale(2, 1);
   }
-} */
+}
+
+
 
 /* ================= SPECIFIC STYLING ================= */
 #intro * {
