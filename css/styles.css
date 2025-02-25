@@ -15,6 +15,32 @@ main {
 footer {
   position: relative;
 }
+#contactIcons .nav-link {
+  background-image: linear-gradient(to right, cyan 50%, white 50%) !important;
+  background-size: 200% 100%;
+  background-position: -100%;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+#contactIcons .nav-link::before{
+  content: "";
+  background: #ffad00;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#contactIcons .nav-link:hover{
+  background-position: 0;
+}
+#contactIcons .nav-link:hover::before{
+  width: 100%;
+}
 h1,
 h2,
 h5 {
@@ -91,8 +117,46 @@ nav::after {
   top: 10vh;
   box-shadow: inset -3px -3px 1px 1px lightgrey;
 }
+.nav-link {
+  background-image: linear-gradient(to right, black 50%, #000000a6 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link::before{
+  content: "";
+  background: #ffad00;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover{
+  background-position: 0;
+}
+.nav-link:hover::before{
+  width: 100%;
+}
 #homeIconLink {
   width: 3rem;
+}
+#homeIconLink.nav-link,
+#homeIconLink.nav-link::before {
+  background-image: none !important;
+  background-size: unset !important;
+  background-position: unset !important;
+  -webkit-text-fill-color: unset !important;
+  transition: none !important;
+}
+
+#homeIconLink.nav-link:hover::before {
+  width: 0 !important;
 }
 #homeIconImage {
   height: 3rem;
@@ -134,6 +198,19 @@ nav::after {
 .card .bi-github {
   font-size: 1.5rem;
 }
+.card .nav-link,
+.card .nav-link::before {
+  background-image: none !important;
+  background-size: unset !important;
+  background-position: unset !important;
+  -webkit-text-fill-color: unset !important;
+  transition: none !important;
+}
+
+.card .nav-link:hover::before {
+  width: 0 !important;
+}
+
 
 /* ================= ANIMATIONS ================= */
 @keyframes fadeInOut {
