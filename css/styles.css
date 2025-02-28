@@ -59,12 +59,11 @@ section {
 }
 #intro::after {
   position: fixed;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left 100%,
-    left top,
-    from(rgba(0, 0, 0, 0.7)),
-    to(rgba(0, 0, 0, 0))
+  will-change: transform, opacity;
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    transparent
   );
   content: "";
   display: block;
