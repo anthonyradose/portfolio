@@ -33,37 +33,6 @@ h2 {
 }
 
 /* ================= SECTIONS ================= */
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  scroll-margin-top: 10vh;
-}
-#intro {
-  height: 90vh;
-}
-#intro::after {
-  position: fixed;
-  will-change: transform, opacity;
-  mask-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    transparent
-  );
-  content: "";
-  display: block;
-  bottom: -33px;
-  left: -11px;
-  right: 0;
-  height: 100%;
-  background-size: 50px 50px;
-  background-image: linear-gradient(to right, #5f9ea0 3px, transparent 3px),
-    linear-gradient(to bottom, purple 1px, transparent 3px);
-  /* background-image: linear-gradient(to right, #6dc2bb 3px, transparent 3px),
-    linear-gradient(to bottom, #AD1F9A 1px, transparent 3px); */
-  background-position: center;
-  animation: moveGrid 3s linear forwards;
-}
 #projects {
   position: relative;
 }
@@ -157,20 +126,6 @@ nav::after {
   --bs-btn-hover-bg: #5ab5a7;
   --bs-btn-active-bg: #4a9a91;
 }
-#scrollLink {
-  position: absolute;
-  top: 70vh;
-}
-#scrollArrow {
-  width: 4rem;
-  height: 4rem;
-  border: 5px solid #393d47;
-  border-left: 5px solid transparent;
-  border-top: 5px solid transparent;
-  transform: rotate(45deg);
-  opacity: 0;
-  animation: fadeInOut 2s 3s ease-in-out infinite;
-}
 #backtoTop {
   color: white;
 }
@@ -197,32 +152,8 @@ nav::after {
 
 
 /* ================= ANIMATIONS ================= */
-@keyframes fadeInOut {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes moveGrid {
-  from {
-    transform: none;
-  }
-  to {
-    transform: perspective(200px) rotateX(50deg) scale(2, 1);
-  }
-}
-
-
 
 /* ================= SPECIFIC STYLING ================= */
-#intro * {
-  z-index: 3;
-}
 .card {
   width: 90%;
 }
