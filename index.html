@@ -11,6 +11,72 @@
       body {
         font-family: "Roboto", sans-serif;
       }
+      nav {
+        height: 10vh;
+        position: fixed;
+        border-bottom: 3px solid cyan;
+        box-shadow: inset -2px 2px 0px 2px mediumpurple;
+      }
+      nav::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          cyan calc(100% - 4px),
+          mediumpurple calc(100% - 4px)
+        );
+      }
+
+      .nav-link::before {
+        content: "";
+        background: #ffad00;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+      }
+      #homeIconLink {
+        width: 3rem;
+      }
+      #homeIconLink.nav-link,
+      #homeIconLink.nav-link::before {
+        background-image: none !important;
+        background-size: unset !important;
+        background-position: unset !important;
+        -webkit-text-fill-color: unset !important;
+      }
+      #homeIconImage {
+        height: 3rem;
+        border-radius: 50%;
+        box-shadow: 1px 1px 1px #53565a;
+      }
+      @media (min-width: 992px) {
+        nav {
+          border-bottom: none;
+          box-shadow: none;
+        }
+        .navbar-collapse::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: linear-gradient(
+            to right,
+            mediumpurple calc(100% - 4px),
+            cyan calc(100% - 4px)
+          );
+        }
+      }
       main {
         position: relative;
         margin-top: 10vh;
@@ -39,7 +105,7 @@
         align-items: center !important;
         justify-content: center !important;
         flex-direction: column !important;
-        display: flex !important
+        display: flex !important;
       }
       #intro::after {
         position: fixed;
@@ -252,9 +318,7 @@
       </nav>
     </header>
     <main>
-      <section
-        id="intro"
-      >
+      <section id="intro">
         <h1>ANTHONY RADOSE</h1>
         <h5 class="text-center">FULL-STACK DEVELOPER</h5>
         <a href="#projects" id="scrollLink"> <div id="scrollArrow"></div> </a>

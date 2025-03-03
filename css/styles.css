@@ -11,7 +11,7 @@ footer {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-#contactIcons .nav-link::before{
+#contactIcons .nav-link::before {
   content: "";
   background: #ffad00;
   display: block;
@@ -22,10 +22,10 @@ footer {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-#contactIcons .nav-link:hover{
+#contactIcons .nav-link:hover {
   background-position: 0;
 }
-#contactIcons .nav-link:hover::before{
+#contactIcons .nav-link:hover::before {
   width: 100%;
 }
 h2 {
@@ -46,26 +46,6 @@ h2 {
 }
 
 /* ================= NAVIGATION STYLING ================= */
-nav {
-  height: 10vh;
-  position: fixed;
-  border-bottom: 3px solid cyan;
-  box-shadow: inset -2px 2px 0px 2px mediumpurple;
-}
-nav::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    to right,
-    cyan calc(100% - 4px),
-    mediumpurple calc(100% - 4px)
-  );
-}
 .navbar-collapse {
   top: 10vh;
   box-shadow: inset -3px -3px 1px 1px lightgrey;
@@ -79,42 +59,21 @@ nav::after {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-.nav-link::before{
-  content: "";
-  background: #ffad00;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
+.nav-link::before {
   transition: all 0.3s ease-in-out;
 }
-.nav-link:hover{
+.nav-link:hover {
   background-position: 0;
 }
-.nav-link:hover::before{
+.nav-link:hover::before {
   width: 100%;
-}
-#homeIconLink {
-  width: 3rem;
 }
 #homeIconLink.nav-link,
 #homeIconLink.nav-link::before {
-  background-image: none !important;
-  background-size: unset !important;
-  background-position: unset !important;
-  -webkit-text-fill-color: unset !important;
   transition: none !important;
 }
-
 #homeIconLink.nav-link:hover::before {
   width: 0 !important;
-}
-#homeIconImage {
-  height: 3rem;
-  border-radius: 50%;
-  box-shadow: 1px 1px 1px #53565a;
 }
 
 /* ================= BUTTON STYLING ================= */
@@ -145,11 +104,9 @@ nav::after {
   -webkit-text-fill-color: unset !important;
   transition: none !important;
 }
-
 .card .nav-link:hover::before {
   width: 0 !important;
 }
-
 
 /* ================= ANIMATIONS ================= */
 
@@ -180,7 +137,7 @@ nav::after {
 #project4 [class^="devicon-"] {
   margin-right: 0rem;
 }
-.card  a.btn.btn-primary.rounded-0 {
+.card a.btn.btn-primary.rounded-0 {
   margin-right: 1rem;
   padding: 0;
 }
@@ -195,7 +152,7 @@ nav::after {
   #project4 [class^="devicon-"] {
     margin-right: 0.5rem;
   }
-  .card  a.btn.btn-primary.rounded-0 {
+  .card a.btn.btn-primary.rounded-0 {
     margin-right: 0;
     padding: 0.75rem 0.375rem;
   }
@@ -240,29 +197,11 @@ nav::after {
 }
 /* Bootstrap lg: */
 @media (min-width: 992px) {
-  nav {
-    border-bottom: none;
-    box-shadow: none;
-  }
   .navbar-collapse {
     height: 10vh;
     top: 0;
     box-shadow: inset -2px 2px 0px 2px cyan;
     border-bottom: 3px solid mediumpurple;
-  }
-  .navbar-collapse::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(
-      to right,
-      mediumpurple calc(100% - 4px),
-      cyan calc(100% - 4px)
-    );
   }
   .card {
     width: 30%;
