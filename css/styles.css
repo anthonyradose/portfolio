@@ -1,17 +1,4 @@
 /* ================= GENERAL STYLING ================= */
-/* * {
-  outline: 1px solid red;
-} */
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: "Roboto", sans-serif;
-}
-main {
-  position: relative;
-  margin-top: 10vh;
-}
 footer {
   position: relative;
 }
@@ -41,8 +28,7 @@ footer {
 #contactIcons .nav-link:hover::before{
   width: 100%;
 }
-h2,
-h5 {
+h2 {
   font-family: "Gugi", sans-serif;
 }
 
