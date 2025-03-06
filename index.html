@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Gugi&family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet';"
     />
     <!-- Bootstrap CSS -->
     <link
@@ -379,9 +381,9 @@
             <div class="card-body px-0 py-3 px-sm-3">
               <h5 class="card-title">Pokedex</h5>
               <p class="card-text pb-2">
-                A partial clone of the official Pokemon Pokedex you would find if
-                you searched for it on google. This app was made to showcase my
-                ability to work with APIs and to create a clean and
+                A partial clone of the official Pokemon Pokedex you would find
+                if you searched for it on google. This app was made to showcase
+                my ability to work with APIs and to create a clean and
                 user-friendly interface.
               </p>
               <div class="my-3">
@@ -485,7 +487,10 @@
       <div class="container-fluid d-flex flex-column align-items-center p-5">
         <h2>CONTACT</h2>
         <p>EMAIL: asradose@gmail.com</p>
-        <ul class="navbar-nav w-25 justify-content-end align-items-center" id="contactIcons">
+        <ul
+          class="navbar-nav w-25 justify-content-end align-items-center"
+          id="contactIcons"
+        >
           <li class="nav-item">
             <a
               class="nav-link"
