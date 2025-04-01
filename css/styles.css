@@ -205,10 +205,16 @@ nav::after {
   -webkit-text-fill-color: unset !important;
   transition: none !important;
 }
-
 .card .nav-link:hover::before {
   width: 0 !important;
 }
+a:has(.bi-caret-up){
+  transition: transform 0.3s ease-in-out; 
+}
+a:has(.bi-caret-up):hover{
+  transform: scale(2);
+}
+
 
 
 /* ================= ANIMATIONS ================= */
