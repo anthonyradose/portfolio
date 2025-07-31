@@ -31,4 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   // Attach the click event listener to the filter button
   filterButton.addEventListener("click", toggleProjectsVisibility);
+
+  // Add clip-path functionality for navbar dropdown
+  const navbar = document.querySelector('.navbar');
+  
+  // Listen for Bootstrap collapse events
+  navbarCollapse.addEventListener('show.bs.collapse', function () {
+    // When dropdown opens
+    navbar.classList.remove('navbar-clipped');
+    navbarCollapse.classList.add('dropdown-clipped');
+  });
+
+  navbarCollapse.addEventListener('hide.bs.collapse', function () {
+    // When dropdown closes
+    navbar.classList.add('navbar-clipped');
+    navbarCollapse.classList.remove('dropdown-clipped');
+  });
+
+  // Initialize navbar with clipped class on page load
+  navbar.classList.add('navbar-clipped');
 });
+
+

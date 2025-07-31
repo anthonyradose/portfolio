@@ -92,18 +92,47 @@ section {
 }
 
 /* ================= NAVIGATION STYLING ================= */
-nav {
-  height: 10vh;
+.navbar {
+  height: 6.2rem; 
   position: fixed;
   border-bottom: 3px solid cyan;
   box-shadow: inset -2px 2px 0px 2px mediumpurple;
+  width: 90%;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  overflow: visible;
+  z-index: 1030;
+  border-bottom: 3px solid cyan !important;
+  box-shadow: inset -2px 2px 0px 2px mediumpurple !important;
+  border-right: 3px solid mediumpurple;
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+}
+.navbar-clipped{
+  clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+
+
+}
+.navbar-clipped::after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: mediumpurple;
+  clip-path: polygon(101% 0, 0% 100%, 100% 100%);
+  z-index: -1;
+}
+.dropdown-clipped{
+  clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
 }
 nav::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 73px; 
   bottom: 0;
-  left: 0;
   right: 0;
   height: 3px;
   background: linear-gradient(
@@ -111,13 +140,15 @@ nav::after {
     cyan calc(100% - 4px),
     mediumpurple calc(100% - 4px)
   );
+
+  z-index: 1029;
 }
 .navbar-collapse {
-  top: 10vh;
+  top: 6.2rem; 
   box-shadow: inset -3px -3px 1px 1px lightgrey;
 }
 .nav-link {
-  background-image: linear-gradient(to right, black 50%, #000000a6 50%);
+  background-image: linear-gradient(to right, black 50%, #131010a6 50%);
   background-size: 200% 100%;
   background-position: -100%;
   position: relative;
@@ -330,12 +361,14 @@ a:has(.bi-caret-up):hover{
 }
 /* Bootstrap lg: */
 @media (min-width: 992px) {
+
   nav {
+
     border-bottom: none;
     box-shadow: none;
   }
   .navbar-collapse {
-    height: 10vh;
+    height: 6.2rem; 
     top: 0;
     box-shadow: inset -2px 2px 0px 2px cyan;
     border-bottom: 3px solid mediumpurple;
