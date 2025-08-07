@@ -52,7 +52,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-margin-top: 10vh;
+  scroll-margin-top: 7.2rem;
 }
 #intro {
   height: 90vh;
@@ -92,11 +92,14 @@ section {
 }
 
 /* ================= NAVIGATION STYLING ================= */
+.navbar-wrapper {
+  height: 6.2rem;
+}
 nav {
-  height: 10vh;
-  position: fixed;
+
   border-bottom: 3px solid cyan;
   box-shadow: inset -2px 2px 0px 2px mediumpurple;
+  
 }
 nav::after {
   content: "";
@@ -113,7 +116,9 @@ nav::after {
   );
 }
 .navbar-collapse {
-  top: 10vh;
+  top: 5.2rem;
+  left: 1rem;
+  right: 1rem;
   box-shadow: inset -3px -3px 1px 1px lightgrey;
 }
 .nav-link {
@@ -329,13 +334,20 @@ a:has(.bi-caret-up):hover{
 }
 /* Bootstrap lg: */
 @media (min-width: 992px) {
+  .navbar-wrapper {
+   left: 2rem;
+   right: 2rem; 
+  }
   nav {
     border-bottom: none;
     box-shadow: none;
+    top: 1rem;
   }
   .navbar-collapse {
     height: 10vh;
-    top: 0;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
     box-shadow: inset -2px 2px 0px 2px cyan;
     border-bottom: 3px solid mediumpurple;
   }
@@ -352,6 +364,9 @@ a:has(.bi-caret-up):hover{
       mediumpurple calc(100% - 4px),
       cyan calc(100% - 4px)
     );
+  }
+  section{
+    scroll-margin-top: 8.2rem;
   }
   .card {
     width: 30%;
