@@ -31,4 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   // Attach the click event listener to the filter button
   filterButton.addEventListener("click", toggleProjectsVisibility);
+
+  // Move clipped corner when mobile menu opens/closes
+  navbarCollapse.addEventListener('show.bs.collapse', () => {
+    navBar.classList.remove('clipped-path');
+    navbarCollapse.classList.add('clipped-path');
+  });
+
+  navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+    navBar.classList.add('clipped-path');
+    navbarCollapse.classList.remove('clipped-path');
+  });
 });

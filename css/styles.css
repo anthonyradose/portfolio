@@ -95,12 +95,13 @@ section {
 .navbar-wrapper {
   height: 6.2rem;
 }
-nav {
 
+nav {
+  position: relative;
   border-bottom: 3px solid cyan;
   box-shadow: inset -2px 2px 0px 2px mediumpurple;
-  
 }
+
 nav::after {
   content: "";
   position: absolute;
@@ -279,6 +280,11 @@ a:has(.bi-caret-up):hover{
   padding: 0;
 }
 
+.clipped-path{
+  clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+}
+
+
 /* ================= MEDIA QUERIES ================= */
 /* Mobile S: */
 @media (min-width: 320px) {
@@ -343,6 +349,9 @@ a:has(.bi-caret-up):hover{
     box-shadow: none;
     top: 1rem;
   }
+  nav.clipped-path{
+    clip-path: none;
+  }
   .navbar-collapse {
     height: 10vh;
     top: 2rem;
@@ -350,6 +359,9 @@ a:has(.bi-caret-up):hover{
     right: 2rem;
     box-shadow: inset -2px 2px 0px 2px cyan;
     border-bottom: 3px solid mediumpurple;
+    clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+
+    z-index: 1;
   }
   .navbar-collapse::after {
     content: "";
@@ -423,3 +435,6 @@ a:has(.bi-caret-up):hover{
 /* Laptop: */
 /* Laptop L:  */
 /* 4K:  */
+
+
+
