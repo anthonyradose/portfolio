@@ -48,41 +48,54 @@
   </head>
   <body>
     <header>
-      <div class="navbar-wrapper fixed-top p-3 bg-white">
-      <nav class="navbar navbar-expand-lg bg-light clipped-path">
-        <div class="container-fluid p-0">
-          <button
-            class="navbar-toggler ms-3 ms-sm-5 rounded-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbar-supportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon light"></span>
-          </button>
-          <div
-            class="w-25 d-flex d-lg-none justify-content-end me-3 me-sm-5"
-            id="homeIconDivMobile"
-          >
-            <a
-              class="nav-link active"
-              id="homeIconLink"
-              aria-current="page"
-              href="#"
-              ><img
-                class="img-fluid"
-                src="./assets/icons/ar.svg"
-                alt="Home Icon"
-                id="homeIconImage"
-            /></a>
-          </div>
-          <div
-            class="collapse navbar-collapse bg-light p-lg-5  fixed-top"
-            id="navbarSupportedContent"
-          >
-            <div class="w-25 d-none d-lg-inline" id="homeIconDiv">
+      <div class="navbar-wrapper fixed-top p-3 bg-white relative">
+        <svg
+          id="bgPattern"
+          class="navbar-stroke position-absolute"
+          width="44"
+          height="45"
+          viewBox="0 0 44 45"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="bgPatternPath"
+            d="M36.5 0.810673L44 0.810666L0.5 45L0.500001 37.5L36.5 0.810673Z"
+            fill="#9370D8"
+          />
+        </svg>
+        <svg
+          id="bgPatternDesktop"
+          class="navbar-stroke position-absolute"
+          width="44"
+          height="45"
+          viewBox="0 0 44 45"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M36.5 0.810673L44 0.810666L0.5 45L0.500001 37.5L36.5 0.810673Z"
+            fill="cyan"
+          />
+        </svg>
+
+        <nav class="navbar navbar-expand-lg bg-light clipped-path">
+          <div class="container-fluid p-0">
+            <button
+              class="navbar-toggler ms-3 ms-sm-5 rounded-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbar-supportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon light"></span>
+            </button>
+            <div
+              class="w-25 d-flex d-lg-none justify-content-end me-3 me-sm-5"
+              id="homeIconDivMobile"
+            >
               <a
                 class="nav-link active"
                 id="homeIconLink"
@@ -95,59 +108,91 @@
                   id="homeIconImage"
               /></a>
             </div>
-            <ul
-              class="navbar-nav mx-auto mt-5 mb-3 my-lg-0 w-50 justify-content-around"
+            <div
+              class="collapse navbar-collapse bg-light p-lg-5 fixed-top"
+              id="navbarSupportedContent"
             >
-              <li class="nav-item align-self-center">
-                <a class="nav-link p-0 my-3" href="#projects">PROJECTS</a>
-              </li>
-              <li class="nav-item align-self-center">
-                <a class="nav-link p-0 my-3" href="#aboutMe">ABOUT ME</a>
-              </li>
-              <li class="nav-item align-self-center">
-                <a class="nav-link p-0 my-3" href="#contact">CONTACT</a>
-              </li>
-            </ul>
-            <ul
-              class="navbar-nav mx-auto mt-3 mb-5 my-lg-0 w-25 justify-content-end text-center"
-            >
-              <li class="nav-item align-self-center">
+              <div class="w-25 d-none d-lg-inline" id="homeIconDiv">
                 <a
-                  class="nav-link p-0 m-lg-2 my-3"
-                  href="https://github.com/anthonyradose"
-                  target="_blank"
-                  ><i class="bi bi-github"></i
-                ></a>
-              </li>
-              <li class="nav-item align-self-center">
-                <a
-                  class="nav-link p-0 m-lg-2 my-3"
-                  href="https://www.linkedin.com/in/anthony-radose-35a969236"
-                  target="_blank"
-                  ><i class="bi bi-linkedin"></i
-                ></a>
-              </li>
-              <li class="nav-item align-self-center">
-                <a
-                  class="nav-link p-0 m-lg-2 my-3"
-                  href="./css/CV-2025.pdf"
-                  target="_blank"
-                  ><i class="bi bi-file-earmark-person"></i
-                ></a>
-              </li>
-              <li class="nav-item align-self-center">
-                <a
-                  class="nav-link p-0 m-lg-2 my-3"
-                  href="https://www.instagram.com/asradose"
-                  target="_blank"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </li>
-            </ul>
+                  class="nav-link active"
+                  id="homeIconLink"
+                  aria-current="page"
+                  href="#"
+                  ><img
+                    class="img-fluid"
+                    src="./assets/icons/ar.svg"
+                    alt="Home Icon"
+                    id="homeIconImage"
+                /></a>
+              </div>
+              <ul
+                class="navbar-nav mx-auto mt-5 mb-3 my-lg-0 w-50 justify-content-around"
+              >
+                <li class="nav-item align-self-center">
+                  <a class="nav-link p-0 my-3" href="#projects">PROJECTS</a>
+                </li>
+                <li class="nav-item align-self-center">
+                  <a class="nav-link p-0 my-3" href="#aboutMe">ABOUT ME</a>
+                </li>
+                <li class="nav-item align-self-center">
+                  <a class="nav-link p-0 my-3" href="#contact">CONTACT</a>
+                </li>
+              </ul>
+              <ul
+                class="navbar-nav mx-auto mt-3 mb-5 my-lg-0 w-25 justify-content-end text-center"
+              >
+                <li class="nav-item align-self-center">
+                  <a
+                    class="nav-link p-0 m-lg-2 my-3"
+                    href="https://github.com/anthonyradose"
+                    target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </li>
+                <li class="nav-item align-self-center">
+                  <a
+                    class="nav-link p-0 m-lg-2 my-3"
+                    href="https://www.linkedin.com/in/anthony-radose-35a969236"
+                    target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </li>
+                <li class="nav-item align-self-center">
+                  <a
+                    class="nav-link p-0 m-lg-2 my-3"
+                    href="./css/CV-2025.pdf"
+                    target="_blank"
+                    ><i class="bi bi-file-earmark-person"></i
+                  ></a>
+                </li>
+                <li class="nav-item align-self-center">
+                  <a
+                    class="nav-link p-0 m-lg-2 my-3"
+                    href="https://www.instagram.com/asradose"
+                    target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+
+              <svg
+                id="bgPatternDropdown"
+                class="navbar-stroke-dropdown position-absolute"
+                width="45"
+                height="45"
+                viewBox="0 0 45 45"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M35.5 0.810673L44.1355 0.946184L0.499999 45L0.512457 36.5125L35.5 0.810673Z"
+                  fill="#D3D3D3"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section
@@ -459,8 +504,8 @@
             <div class="card-body px-0 py-3 px-sm-3">
               <h5 class="card-title">Dev-Worthy</h5>
               <p class="card-text pb-2">
-                A motivational web app designed to support aspiring developers in overcoming impostor 
-                syndrome.
+                A motivational web app designed to support aspiring developers
+                in overcoming impostor syndrome.
               </p>
               <div class="my-3">
                 <p>Made With:</p>

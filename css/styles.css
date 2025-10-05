@@ -16,7 +16,7 @@ footer {
   position: relative;
 }
 #contactIcons .nav-link {
-  background-image: linear-gradient(to right, cyan 50%, white 50%) !important;
+  background-image: linear-gradient(to right, #00ffff 50%, white 50%) !important;
   background-size: 200% 100%;
   background-position: -100%;
   position: relative;
@@ -99,7 +99,7 @@ section {
 nav {
   position: relative;
   border-bottom: 3px solid cyan;
-  box-shadow: inset -2px 2px 0px 2px mediumpurple;
+  box-shadow: inset -2px 2px 0px 2px #9370d8;
 }
 
 nav::after {
@@ -283,7 +283,38 @@ a:has(.bi-caret-up):hover{
 .clipped-path{
   clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
 }
+#bgPattern{
+  right: 1rem;
+  z-index: 99999999;
+  top: 3.9375rem;
+  height: 1.25rem;
+width: 1.25rem;
 
+}
+#bgPatternDesktop{
+  top: 7rem;
+  right: 0;
+  z-index: 99999999;
+  height: 1.25rem;
+width: 1.25rem;
+display: none;
+}
+
+
+#bgPatternDropdown {
+  bottom: 0;
+  right: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  z-index: 99999999;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.navbar-collapse.collapsing #bgPatternDropdown,
+.navbar-collapse.show #bgPatternDropdown {
+  opacity: 1;
+}
 
 /* ================= MEDIA QUERIES ================= */
 /* Mobile S: */
@@ -394,6 +425,17 @@ a:has(.bi-caret-up):hover{
   #aboutMe p {
     font-size: 1.3rem;
   }
+  #bgPattern{
+   display: none;
+  }
+    #bgPatternDropdown {
+    display: none !important;
+  }
+  #bgPatternDesktop{
+   display: block;
+  }
+
+  
 }
 /* Bootstrap xl: */
 @media (min-width: 1200px) {
@@ -435,6 +477,8 @@ a:has(.bi-caret-up):hover{
 /* Laptop: */
 /* Laptop L:  */
 /* 4K:  */
+
+
 
 
 
