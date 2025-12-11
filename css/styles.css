@@ -16,7 +16,11 @@ footer {
   position: relative;
 }
 #contactIcons .nav-link {
-  background-image: linear-gradient(to right, #00ffff 50%, white 50%) !important;
+  background-image: linear-gradient(
+    to right,
+    #00ffff 50%,
+    white 50%
+  ) !important;
   background-size: 200% 100%;
   background-position: -100%;
   position: relative;
@@ -24,7 +28,7 @@ footer {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-#contactIcons .nav-link::before{
+#contactIcons .nav-link::before {
   content: "";
   background: #ffad00;
   display: block;
@@ -35,10 +39,10 @@ footer {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-#contactIcons .nav-link:hover{
+#contactIcons .nav-link:hover {
   background-position: 0;
 }
-#contactIcons .nav-link:hover::before{
+#contactIcons .nav-link:hover::before {
   width: 100%;
 }
 h1,
@@ -60,11 +64,7 @@ section {
 #intro::after {
   position: fixed;
   will-change: transform, opacity;
-  mask-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    transparent
-  );
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   content: "";
   display: block;
   bottom: -33px;
@@ -131,7 +131,7 @@ nav::after {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-.nav-link::before{
+.nav-link::before {
   content: "";
   background: #ffad00;
   display: block;
@@ -142,10 +142,10 @@ nav::after {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-.nav-link:hover{
+.nav-link:hover {
   background-position: 0;
 }
-.nav-link:hover::before{
+.nav-link:hover::before {
   width: 100%;
 }
 #homeIconLink {
@@ -213,14 +213,12 @@ nav::after {
 .card .nav-link:hover::before {
   width: 0 !important;
 }
-a:has(.bi-caret-up){
-  transition: transform 0.3s ease-in-out; 
+a:has(.bi-caret-up) {
+  transition: transform 0.3s ease-in-out;
 }
-a:has(.bi-caret-up):hover{
+a:has(.bi-caret-up):hover {
   transform: scale(2);
 }
-
-
 
 /* ================= ANIMATIONS ================= */
 @keyframes fadeInOut {
@@ -242,8 +240,6 @@ a:has(.bi-caret-up):hover{
     transform: perspective(200px) rotateX(50deg) scale(2, 1);
   }
 }
-
-
 
 /* ================= SPECIFIC STYLING ================= */
 #intro * {
@@ -271,35 +267,41 @@ a:has(.bi-caret-up):hover{
   height: 5rem;
   box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.2);
 }
+#project0 [class^="devicon-"],
 #project3 [class^="devicon-"],
-#project4 [class^="devicon-"], #project8 [class^="devicon-"] {
+#project4 [class^="devicon-"],
+#project8 [class^="devicon-"] {
   margin-right: 0rem;
 }
-.card  a.btn.btn-primary.rounded-0 {
+.card a.btn.btn-primary.rounded-0 {
   margin-right: 1rem;
   padding: 0;
 }
 
-.clipped-path{
-  clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+.clipped-path {
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(100% - 20px) 100%,
+    100% calc(100% - 20px),
+    100% 0
+  );
 }
-#bgPattern{
+#bgPattern {
   right: 1rem;
   z-index: 99999999;
   top: 3.9375rem;
   height: 1.25rem;
-width: 1.25rem;
-
+  width: 1.25rem;
 }
-#bgPatternDesktop{
+#bgPatternDesktop {
   top: 7rem;
   right: 0;
   z-index: 99999999;
   height: 1.2rem;
-width: 1.25rem;
-display: none;
+  width: 1.25rem;
+  display: none;
 }
-
 
 #bgPatternDropdown {
   bottom: 0;
@@ -322,26 +324,32 @@ display: none;
 }
 /* Mobile M: */
 @media (min-width: 375px) {
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"], #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     margin-right: 0.5rem;
   }
-  .card  a.btn.btn-primary.rounded-0 {
+  .card a.btn.btn-primary.rounded-0 {
     margin-right: 0;
     padding: 0.75rem 0.375rem;
   }
 }
 /* Mobile L: */
 @media (min-width: 425px) {
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"], #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     margin-right: 1rem;
   }
 }
 /* Bootstrap sm: */
 @media (min-width: 576px) {
+  #project0 .my-3,
   #project3 .my-3,
-  #project4 .my-3, #project8 .my-3  {
+  #project4 .my-3,
+  #project8 .my-3 {
     margin-bottom: 1rem !important;
   }
   [class^="devicon-"] {
@@ -350,8 +358,10 @@ display: none;
   .card-text {
     width: calc(100% - 56px);
   }
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"],  #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     margin-right: 0.5rem;
   }
 }
@@ -360,27 +370,31 @@ display: none;
   .card {
     width: 45%;
   }
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"],  #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     font-size: 1.3rem;
   }
+  #project0 .my-3,
   #project3 .my-3,
-  #project4 .my-3, #project8 .my-3 {
+  #project4 .my-3,
+  #project8 .my-3 {
     margin-bottom: 1.4rem !important;
   }
 }
 /* Bootstrap lg: */
 @media (min-width: 992px) {
   .navbar-wrapper {
-   left: 2rem;
-   right: 2rem; 
+    left: 2rem;
+    right: 2rem;
   }
   nav {
     border-bottom: none;
     box-shadow: none;
     top: 1rem;
   }
-  nav.clipped-path{
+  nav.clipped-path {
     clip-path: none;
   }
   .navbar-collapse {
@@ -390,7 +404,13 @@ display: none;
     right: 2rem;
     box-shadow: inset -2px 2px 0px 2px cyan;
     border-bottom: 3px solid mediumpurple;
-    clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 20px) 100%,
+      100% calc(100% - 20px),
+      100% 0
+    );
 
     z-index: 1;
   }
@@ -408,34 +428,36 @@ display: none;
       cyan calc(100% - 4px)
     );
   }
-  section{
+  section {
     scroll-margin-top: 8.2rem;
   }
   .card {
     width: 30%;
   }
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"],  #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     font-size: 1.1rem;
   }
+  #project0 .my-3,
   #project3 .my-3,
-  #project4 .my-3, #project8 .my-3 {
+  #project4 .my-3,
+  #project8 .my-3 {
     margin-bottom: 1.7rem !important;
   }
   #aboutMe p {
     font-size: 1.3rem;
   }
-  #bgPattern{
-   display: none;
+  #bgPattern {
+    display: none;
   }
-    #bgPatternDropdown {
+  #bgPatternDropdown {
     display: none !important;
   }
-  #bgPatternDesktop{
-   display: block;
+  #bgPatternDesktop {
+    display: block;
   }
-
-  
 }
 /* Bootstrap xl: */
 @media (min-width: 1200px) {
@@ -448,13 +470,17 @@ display: none;
   #project2 .my-3 {
     margin-bottom: 1.1rem !important;
   }
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     font-size: 1.1rem;
     margin-right: 0.3rem;
   }
+  #project0 .my-3,
   #project3 .my-3,
-  #project4 .my-3, #project8 .my-3 {
+  #project4 .my-3,
+  #project8 .my-3 {
     margin-bottom: 1.8rem !important;
   }
   #aboutMe p {
@@ -463,12 +489,16 @@ display: none;
 }
 /* Bootstrap xxl: */
 @media (min-width: 1400px) {
+  #project0 [class^="devicon-"],
   #project3 [class^="devicon-"],
-  #project4 [class^="devicon-"], #project8 [class^="devicon-"] {
+  #project4 [class^="devicon-"],
+  #project8 [class^="devicon-"] {
     font-size: 1.5rem;
   }
+  #project0 .my-3,
   #project3 .my-3,
-  #project4 .my-3, #project8 .my-3 {
+  #project4 .my-3,
+  #project8 .my-3 {
     margin-bottom: 1.4rem !important;
   }
 }
@@ -477,8 +507,3 @@ display: none;
 /* Laptop: */
 /* Laptop L:  */
 /* 4K:  */
-
-
-
-
-
